@@ -16,3 +16,5 @@ income.groups <- as.character(income.groups)
 income.groups <- ifelse(is.na(income.groups),"no income", income.groups)
 summary(income.groups)
 
+# normalizing values
+summary(custdata$age)
