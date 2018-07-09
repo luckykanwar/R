@@ -30,3 +30,5 @@ ggplot(races_per_year) + geom_line(aes(x=races_per_year$raceYear, y=races_per_ye
 
 #bar graph representing number of races per year
 ggplot(races_per_year) + geom_bar(aes(x=races_per_year$raceYear, y=races_per_year$raceCount, fill=races_per_year$raceCount), stat="identity") + coord_flip() + ggtitle("Races held per year") + xlab("Race Count") + ylab("Year")
+
+
