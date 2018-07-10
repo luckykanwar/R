@@ -45,6 +45,7 @@ race_modified <- left_join(
   circuits %>% select(-url), 
   by='circuitId')
 
+# Fastest Lap per Circuit
   results_3 <- results_2 %>% 
   dplyr::filter(year>2004) %>%
   dplyr::group_by(name, year) %>%
@@ -59,7 +60,7 @@ race_modified <- left_join(
          subtitle='speed in km/h') +
     guides(color=FALSE)
   
-  
+  # Fastest Lap per year
   results_2 %>% 
     dplyr::filter(year>2004) %>% 
     dplyr::group_by(name,year) %>% 
@@ -72,3 +73,7 @@ race_modified <- left_join(
     labs(title='Fastest Lap per Year',
          subtitle='in km/h, grouped by Grand Prix') + 
     guides(color = FALSE)
+  
+  
+  
+  
