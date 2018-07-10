@@ -65,7 +65,7 @@ race_modified <- left_join(
     dplyr::group_by(name,year) %>% 
     summarize(medianFastestLapSpeed = median(fastestLapSpeed,na.rm=T)) %>% 
     ggplot(aes(x=factor(year),y= medianFastestLapSpeed,color=medianFastestLapSpeed)) + 
-    geom_boxplot(alpha=1) + 
+    geom_boxplot(alpha=1, fill="red", color = "blue") + 
     geom_jitter(shape=16,position=position_jitter(0.2),size=1.5) + 
     geom_smooth(method='loess',aes(group=1),color='red',lty=2,size=.5) +
     scale_color_gradientn(name="",colours=rev(viridis::viridis(20))) + 
